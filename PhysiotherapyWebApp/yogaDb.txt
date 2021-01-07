@@ -1,0 +1,129 @@
+Documents:-
+db.exercise
+{
+   "exercise_id",
+   "title",
+   "equipement"{
+      "equipement_name"
+   },
+   "image_path",
+   "video_path",
+   "difficulty_level",
+   "area",
+   "age_group",
+   "assitance",
+   "aim"{
+      "aim_name"
+   },
+   "joint"{
+      "joint_name"
+   },
+   "movement_direction"{
+      "movement_direction_name"
+   },
+   "muscle"{
+      "muscle_name"
+   },
+   "precaution_instruction"{
+      "precaution_instruction_name"
+   },
+   "instruction"{
+      "instruction_name",
+      "order",
+      "video_time_in_seconds"
+   }
+}
+db.exercise.createIndex( { exercise_id:1 }, { unique: true } )
+
+db.doctor
+{
+   "mobile_number",
+   "email",
+   "title",
+   "first_name",
+   "last_name",
+   "year_of_birth",
+   "registration_date",
+   "patient"{
+      "patient_id"
+   }"appointment"{
+      "patient_id",
+      "date",
+      "payment_status",
+      "visited",
+      "plan_id"
+   },
+   "is_deleted"
+}
+db.doctor.createIndex( { mobile_number:1}, { unique: true } )
+
+db.client
+{
+   "mobile_number",
+   "email",
+   "title",
+   "first_name",
+   "last_name",
+   "year_of_birth",
+   "registration_date",
+   "favourate_exercise"{
+      "exercise_id"
+   },
+   "patient"{
+      "patient_id",
+      "patient_relation_with_client"
+   },
+   "is_deleted"
+}
+db.client.createIndex( { mobile_number:1}, { unique: true } )
+
+db.patient
+{
+   "patient_id",
+   "patient_title",
+   "patient_first_name",
+   "patient_last_name",
+   "patient_year_of_birth",
+   "client_id",
+   "history"{
+      "date",
+      "text"
+   },
+   "doctor"{
+      "doctor_id"
+   },
+   "appointment"{
+      "doctor_id",
+      "date_time",
+      "payment_status",
+      "visited",
+      "plan_id",
+      "date_assigned",
+      "plan_validity_date",
+   },
+   "plan_history"{
+      "plan_id",
+      "date_time",
+      "exercise_id",
+      "accuracy_ratio",
+      "speed_ratio",
+      "error_discriptions"
+   },
+   "is_deleted"
+}
+db.patient.createIndex( { patient_id:1 }, { unique: true } )
+
+db.plan
+{
+   "plan_id",
+   "exercise"{
+      "exercise_id",
+      "order"
+   },
+   "created_date",
+   "created_by_id",
+   "is_created_by_doctor",
+   "is_deleted"
+}
+db.plan.createIndex( { plan_id:1 }, { unique: true } )
+
