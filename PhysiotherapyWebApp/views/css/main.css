@@ -10,12 +10,48 @@
 body{
 	text-align: center !important;
 }
-p{
+
+.two-col {
+    overflow: hidden;/* Makes this div contain its floats */
+}
+
+.two-col .col-1,
+.two-col .col-2 {
+    width: 49%;
+}
+
+.two-col .col-1 {
+    float: left;
+}
+
+.two-col .col-2 {
+    float: right;
+}
+
+.two-col label {
+    display: block;
+}
+
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  p{
 	margin-top: 20px;
 	font-size: 30px;
 }
 input{
 	text-align: center;
+}
+select{
+    text-align: center;
 }
 .mssg{
 	margin-top: 5px;

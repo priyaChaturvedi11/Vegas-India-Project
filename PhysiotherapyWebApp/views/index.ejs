@@ -14,12 +14,12 @@
 		$(document).ready(function () {
 
 			$("#form1").submit(function (event) {
-				event.preventDefault();
+				event.preventDefault(); 
 
 				$.ajax({
 					type: 'POST',
 					url: '/register',
-					data: $('#form1').serialize(),
+					data: $('#form1').serialize(), 
 					dataType: "json",
 					success: function (response) {
 						//alert("a");
@@ -31,14 +31,14 @@
 						setTimeout(function () {
 							document.getElementById("check").innerHTML = "";
 						}, 3000);
-						if (response.Success == "You are regestered,You can login now.") {
+						if (response.Success == "You are registered, you can login now.") {
 							document.getElementById("aa").click();
 						};
 					},
 					error: function (err) {
 						console.log(err);
 					}
-				})
+				}) // ajax() ends  here
 			});
 		});
 	</script>
@@ -53,18 +53,60 @@
 		</div>
 		<div class="form-group">
 			<form id="form1" method="post">
-				<input type="text" name="mobile_number" placeholder="Mobile Number" required=""
+				<div class="two-col">
+					<div class="col-1">
+						<input type="text" name="mobile_number" placeholder="Mobile Number" required=""
+						class="form-control">
+					</div>
+					<div class="col-2">
+						<input type="text" name="email" placeholder="E-mail" class="form-control">
+					</div>
+				</div>
+				
+				<br />
+
+				<div class="two-col">
+					<input type="text" name="title" placeholder="Title" class="form-control" required=""><br />
+				</div>
+
+				<br />
+
+				<div class="two-col">
+					<div class="col-1">
+						<input type="text" name="first_name" placeholder="First Name" class="form-control" required="">
+					</div>
+					<div class="col-2">
+						<input type="text" name="last_name" placeholder="Last Name" class="form-control" required=""><br />
+					</div>
+				</div>
+				
+				<br />
+
+				<div class="two-col">
+					<select name="year_of_birth" placeholder="Year of Birth" class="form-control"
+					required="" id="year_of_birth">
+						<option value="">Select Year</option>	
+					</select>	
+				</div>
+
+				<br />
+
+				<div class="two-col">
+					<div class="col-1">
+						<input type="password" name="password" placeholder="Password" required="" class="form-control">
+					</div>
+					<div class="col-2">  
+						<input type="password" name="passwordConf" placeholder="Confirm Password" required=""
 					class="form-control"><br />
-				<input type="text" name="email" placeholder="E-mail" class="form-control"><br />
-				<input type="text" name="title" placeholder="Title" class="form-control" required=""><br />
-				<input type="text" name="first_name" placeholder="First Name" class="form-control" required=""><br />
-				<input type="text" name="last_name" placeholder="Last Name" class="form-control" required=""><br />
-				<input type="text" name="year_of_birth" placeholder="year_of_birth" class="form-control"
-					required=""><br />
-				<input type="password" name="password" placeholder="Password" required="" class="form-control"><br />
-				<input type="password" name="passwordConf" placeholder="Confirm Password" required=""
-					class="form-control"><br />
-				<input type="submit" value="Register" class="btn btn-success">
+					</div>	
+				</div>
+
+				<br />
+
+				<div class="two-col">
+					<input type="submit" value="Register" class="btn btn-success">
+				</div>
+				
 			</form>
 		</div>
 
@@ -78,5 +120,22 @@
 		</div>
 	</div>
 </body>
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function (){
+        var yob = $("#year_of_birth");
+        var currentYear = (new Date()).getFullYear();
+        for (var i = 1947; i <= currentYear; i++) {
+            var option = $("<option />");
+            option.html(i);
+            option.val(i);
+            yob.append(option);
+        }
+	});
+	
+
+</script>
 
 </html>

@@ -11,6 +11,8 @@ router.post('/register', function (req, res) {
 	console.log('body: ');
 	console.log(req.body);
 	var personInfo = req.body;
+	var emailRegex = /^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
+
 	if (!personInfo.mobile_number || !personInfo.year_of_birth || !personInfo.title || !personInfo.first_name || !personInfo.last_name || !personInfo.password || !personInfo.passwordConf) {
 		res.send('fail');
 	} else {
@@ -61,7 +63,7 @@ router.post('/register', function (req, res) {
 					console.log(d);
 					console.info('\n\nPOST completed');
 					if (d.success) {
-						return res.send({ "Success": "You are regestered,You can login now." });
+						return res.send({ "Success": "You are registered,You can login now." });
 					}
 					else {
 						if(d.extra.msg == 5)
