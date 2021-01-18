@@ -5,6 +5,9 @@ const PlanSchema = new Schema({
     plan_id: Number,
     exercise: {
         exercise_id: Number,
+        rep: Number,
+        set: Number,
+        hold: Number,
         order: String
     },
     created_date: Date,
