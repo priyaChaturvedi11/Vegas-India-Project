@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+    	body { 
+    		padding-top: 65px; 
+		}
+    	/*navbar css*/
+        .navbar{
+            background-color: #2f4f4f;
+        }
+        .nav-item, .navbar-brand{
+            color: white;
+        }
+        .nav-item:hover, .navbar-brand:hover{
+            color: grey;
+        }
+        .btn-h {
+			background-color: DodgerBlue;
+		  	border: none; 
+		  	color: white; 
+		  	padding: 2px 4px; 
+		  	font-size: 1px; 
+		  	cursor: pointer; 
+		  	margin: 1% 10px;
+		  	border-radius: 1.5rem;
+		}
+		.navigation:after{
+			display: block;
+			content: "";
+			clear: both;
+		}
+		/*calender css*/
+		.calender p{
+			background: LightYellow; 
+			height: 30px; 
+			padding: 5px 45%;
+			text-align: center;
+		}
+		/*main content css*/
+		.programs{
+			display: block;
+			padding: 15px;
+			-webkit-column-count: 3;
+			column-count: 3;
+			-webkit-column-gap: 10px;
+			column-gap: 10px;
+		 
+		}
+		.post{
+			background: orange;
+			height: 140px;
+			padding: 58px 128px;
+			margin: 5%;
+			width: ;
+		}
+        /*footer css*/
+        .footer{
+        	background: grey;
+        	min-height: 40px;
+        }
+        .footer .contain{
+        	-webkit-column-count: 3;
+        	column-count: 3;
+        	margin: 1% 35%;
+        }
+        .footer .col{
+        	text-align: center;
+        	padding: 1%;
+        	margin: 1%;
+        }
+        .btn {
+		  background-color: DodgerBlue;
+		  border: none; 
+		  color: white; 
+		  padding: 12px 16px; 
+		  font-size: 16px; 
+		  cursor: pointer; 
+		}
+		.btn:hover, .btn-h:hover{
+		  background-color: RoyalBlue;
+		}
+    </style>
+
+</head>
+<body>
+	<div class="wrapper">
+		
+			<!---NAVBAR STARTS--->
+    <div class="navigation">
+            <nav class="navbar navbar-expand-md fixed-top">
+                <a href="#" class="navbar-brand">DD</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                   <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="#" class="nav-item nav-link active">Dashboard</a>
+                        <a href="#" class="nav-item nav-link">Creator</a>
+                        <a href="#" class="nav-item nav-link">Clients</a>
+                        <a href="#" class="nav-item nav-link">Account</a>
+                    </div>
+                    <div class="form-inline ml-auto">
+                        
+                        <div class="navbar-nav">
+                            <button class="btn-h"><i class="material-icons">notifications_active</i></button>
+                            <button class="btn-h"><i class="material-icons">pending_actions</i></button>
+                            <button class="btn-h"><i class="material-icons">help</i></button>
+                            <button class="btn-h"><i class="material-icons">keyboard_backspace</i></button>
+                        </div>
+                        
+                        <input type="text" class="form-control mr-sm-2" placeholder="Search">
+                        <button class="btn btn-outline-light"><i class="fa fa-star"></i> Get Pro</button>
+                    </div>
+                </div>
+            </nav>
+    </div>     
+    <!---END OF NAVBAR--->
+ 
+    <!---SCROLLABLE CALENDER STARTS--->
+    <div class="calender">
+    	<p>Today</p>
+    </div> 
+    <!---SCROLLABLE CALENDER ENDS--->
+
+	<!---MAIN CONTENT STARTS--->
+	<div class="main">
+		<div class="progress" style="margin: 0 1%;">
+  			<div class="progress-bar" style="width: 25%;">Loading...</div>
+		</div>
+		<div class="message"></div>
+		<div class="programs">
+			<div class="post row-1">one</div>
+			<div class="post row-1">two</div>
+			<div class="post row-1">three</div>
+
+			<div class="post row-2">one</div>
+			<div class="post row-2">two</div>
+			<div class="post row-2">three</div>
+
+			<div class="post row-3">one</div>
+			<div class="post row-3">two</div>
+			<div class="post row-3">three</div>
+		</div>
+	</div>
+	<!---MAIN CONTENT ENDS--->
+
+    <!-- FOOTER START -->
+    <div class="footer fixed-bottom">
+      <div class="contain">
+        <div class="col">
+          <button class="btn"><i class="material-icons">book_online</i></button>
+          <p class="footer-text">Program</p>
+        </div>
+        <div class="col">
+          <button class="btn"><i class="material-icons">assessment</i></button>
+          <p class="footer-text">Results</p>
+        </div>
+        <div class="col">
+          <button class="btn"><i class="material-icons">keyboard_backspace</i></button>
+          <p class="footer-text">Exit Demo</p>
+        </div>
+    </div>
+    <!-- END OF FOOTER -->
+
+	</div>
+</body>
+
+</html>

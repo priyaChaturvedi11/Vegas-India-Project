@@ -7,6 +7,7 @@ router.get('/', function (req, res) {
 	return res.render('index.ejs');
 });
 
+
 router.post('/register', function (req, res) {
 	console.log('body: ');
 	console.log(req.body);
@@ -90,6 +91,12 @@ router.post('/register', function (req, res) {
 router.get('/login', function (req, res) {
 	return res.render('login.ejs');
 });
+
+
+router.get('/home', function(req, res, next){
+	return res.render("home.ejs");
+});
+
 
 router.post('/login', function (req, res) {
 	console.log('body: ');
