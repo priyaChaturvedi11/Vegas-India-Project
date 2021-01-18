@@ -67,7 +67,7 @@ router.post('/register', function (req, res) {
 						return res.send({ "Success": "You are registered,You can login now." });
 					}
 					else {
-						if(d.extra.msg == 5)
+						if(d.extras.msg == 5)
 							return res.send({ "Success": "Mobile Number is already used." });
 						else
 							return res.send({ "Success": "Please try again later!!" });
@@ -145,7 +145,7 @@ router.post('/login', function (req, res) {
 				return res.send({ "Success": "Success!" });
 			}
 			else {
-				if(d.extra.msg == 1)
+				if(d.extras.msg == 1)
 					return res.send({ "Success": "This Email Is not regestered!" });
 				else
 					return res.send({ "Success": "Wrong password!" });
