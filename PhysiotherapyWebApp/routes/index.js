@@ -97,6 +97,14 @@ router.get('/home', function(req, res, next){
 	return res.render("home.ejs");
 });
 
+router.get('/charts', function(req, res, next){
+	return res.render("charts.ejs");
+});
+
+router.get('/start_plan', function(req, res, next){
+	return res.render("start_plan.ejs");
+});
+
 
 router.post('/login', function (req, res) {
 	console.log('body: ');
