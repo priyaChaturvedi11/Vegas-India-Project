@@ -1,0 +1,40 @@
+html, body{
+    margin: 0 auto;
+    height: 100%;
+}
+.wrapper{
+    padding: 22px;
+    margin: 15px auto;
+}
+.patient{
+    display: inline-block;
+    width: 28.33%;
+    padding: 1%;
+    margin: 1%;
+    background-color:  #f8c471;
+    min-height: 300px;
+   }
+.chart{
+    width: 92%;
+    background-color: white;
+    border: grey 1px;
+    height: 100px;
+    margin: 4%;
+    padding: 0 0 10px 0;
+    position: relative;
+}
+.chart p{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font: bold 12px Sans-Serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: #369;
+    color: #fff;
+    transform-origin: 0.0;
+    transform: rotate(90deg);
+}
+.patient p{
+    text-align: center;
+}

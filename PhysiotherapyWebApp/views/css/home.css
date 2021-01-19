@@ -1,0 +1,78 @@
+body { 
+    padding-top: 65px; 
+}
+/*navbar css*/
+.navbar{
+    background-color: #2f4f4f;
+}
+.nav-item, .navbar-brand{
+    color: white;
+}
+.nav-item:hover, .navbar-brand:hover{
+    color: grey;
+}
+.btn-h {
+    background-color: DodgerBlue;
+      border: none; 
+      color: white; 
+      padding: 2px 4px; 
+      font-size: 1px; 
+      cursor: pointer; 
+      margin: 1% 10px;
+      border-radius: 1.5rem;
+}
+.navigation:after{
+    display: block;
+    content: "";
+    clear: both;
+}
+/*calender css*/
+.calender p{
+    background: LightYellow; 
+    height: 30px; 
+    padding: 5px 45%;
+    text-align: center;
+}
+/*main content css*/
+.programs{
+    display: block;
+    padding: 15px;
+    -webkit-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 10px;
+    column-gap: 10px;
+ 
+}
+.post{
+    background: orange;
+    height: 140px;
+    padding: 58px 128px;
+    margin: 5%;
+    width: ;
+}
+/*footer css*/
+.footer{
+    background: grey;
+    min-height: 40px;
+}
+.footer .contain{
+    -webkit-column-count: 3;
+    column-count: 3;
+    margin: 1% 35%;
+}
+.footer .col{
+    text-align: center;
+    padding: 1%;
+    margin: 1%;
+}
+.btn {
+  background-color: DodgerBlue;
+  border: none; 
+  color: white; 
+  padding: 12px 16px; 
+  font-size: 16px; 
+  cursor: pointer; 
+}
+.btn:hover, .btn-h:hover{
+  background-color: RoyalBlue;
+}
