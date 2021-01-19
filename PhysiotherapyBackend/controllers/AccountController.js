@@ -211,7 +211,8 @@ export class AccountController {
                 firstName: userRegistrationModel.firstName,
                 lastName: userRegistrationModel.lastName,
                 passwordHash: this.crypto.pbkdf2Sync(userRegistrationModel.password, passwordSaltIn, cryptoIterations, cryptoKeyLen, cryptoDigest),
-                passwordSalt: passwordSaltIn
+                passwordSalt: passwordSaltIn,
+                registeration_date: Date.now()
             });
 
             return new me.ApiResponse({ success: true, extras: { user: user } });

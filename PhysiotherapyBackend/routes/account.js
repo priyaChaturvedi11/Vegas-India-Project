@@ -31,7 +31,6 @@ router.route('/account/register')
 
         if (apiResponseStep1.success) {
             accountController.register(apiResponseStep1.extras.user, function (err, apiResponseStep2) {
-
                 console.log(apiResponseStep2);   
                 return res.send(apiResponseStep2);
             });
